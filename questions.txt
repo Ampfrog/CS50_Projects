@@ -1,0 +1,4 @@
+0. Size range is 3x3 to 9x9
+1. int 2D array
+2. greet()
+3. init(), draw(), move(), won()
