@@ -1,0 +1,12 @@
+1.  Fixed-width integral types library
+2.  So you know exactly the type of data you are working with
+3.  BYTE = 1 byte (8 bits), DWORD = 4 bytes (32-bit unsigned integer), LONG = 4 bytes (32-bit signed integer), WORD = 2 bytes (16-bit unsigned integer)
+4.  BM to set file type in BITMAPFILEHEADER
+5.  bfType = BMP file size, biType = bytes required by BITMAPINFOHEADER
+6.  Indicates a top-down Device-Independent Bitmap (DIB)
+7.  biBitCount
+8.  File could not be opened
+9.  Only reading one set of data at a time (read each header once, read one triple at a time)
+10. 3   (3*3 = 9 % 4 = 1, 4-1 = 3 % 4 = 3)
+11. Change the offset of the file pointer (jump forward or backward from current spot in file that is being pointed to)
+12. Indicates to seek from current pointer location
