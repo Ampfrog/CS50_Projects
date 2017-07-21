@@ -1,0 +1,11 @@
+0.  a pneumoconiosis caused by inhalation of very fine silicate or quartz dust (https://www.merriam-webster.com/medical/pneumonoultramicroscopicsilicovolcanoconiosis)
+1.  getrusage() returns resource usage measures for the calling process, calling process + all children processes, or calling thread
+2.  16
+3.  Because it needs to pull actual system data at the time it is called.
+4.  Reads in text file char by char; 
+        if alpha or ', then valid and starts creating word, if word reaches >45 chars, considers invalid and runs through rest of word;
+        if has a number [isdigit()], ignores word; 
+        if not letter, quote or number, then is space or punctuation = end of word, runs spellchecker. 
+      Quits when end of text file is reached.
+5.  fscan alone may allow for invalid words to be read in, whereas checking character by character ensures validity as it is read in. Also save time by exiting immediately if not valid instead of reading whole word in initially & looping through it.
+6.  To help indicate state of argument will not change inside of function.
