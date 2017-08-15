@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import helpers
+
+from analyzer import Analyzer
+from termcolor import colored
+
+def main():
+    #Ensure proper usage
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./tweets <Twitter screen name>")
+    
+    #Absolute paths to lists
+    positives = os.path.join(sys.path[0], "positive-words.txt")
+    negatives = os.path.join(sys.path[0], "negative-words.txt")
+    
+    #Instantiate analyzer
+    analyzer = Analyzer(positives, negatives)
+    
+    #Get up to 200 tweets for user, per get_user_timeline count arg
+    tweetList = helpers.get_user_timeline(sys.argv[1])
+    
+    #Analyze tweets
+    if tweetList is None:
+        sys.exit("Invalid or private account.")
+    
+    #Get tweet count
+    tweetLen = len(tweetList);
+    
+    if tweetLen == 0:
+        print("No tweets found for screen name {}.".format(sys.argv[1]))
+    else:
+        #Limit to most recent 50 tweets (tweetList is newest -> oldest)
+        if tweetLen > 50:
+            tweetLen = 50
+        
+        #Loop through tweets
+        for i in range(tweetLen):
+            score = analyzer.analyze(tweetList[i])
+            
+            if score > 0.0:
+                print(colored(":) {}".format(tweetList[i]), "green"))
+            elif score < 0.0:
+                print(colored(":( {}".format(tweetList[i]), "red"))
+            else:
+                print(colored(":| {}".format(tweetList[i]), "yellow"))
+
+
+#-------------------------
+if __name__ == "__main__":
+    main()
