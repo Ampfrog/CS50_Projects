@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shares Sold
+{% endblock %}
+
+{% block main %}
+    <h3 class="text-left">Shares Sold</h3>
+    <div>
+        <table class="stock-tbl">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{stockName}}</td>
+                    <td>{{stockSym}}</td>
+                    <td>{{stockPrice}}</td>
+                    <td>{{stockQty}}</td>
+                    <td>{{stockTotal}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4 class="text-left">Cash Balance: {{stockCash}}</h4>
+    <p>
+        <a href="sell"><button>Make Another Sale</button></a>
+    </p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shares Purchased
+{% endblock %}
+
+{% block main %}
+    <h3>Shares Purchased</h3>
+    <div>
+        <table class="stock-tbl">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Cash Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{stockName}}</td>
+                    <td>{{stockSym}}</td>
+                    <td>{{stockPrice}}</td>
+                    <td>{{stockQty}}</td>
+                    <td>{{stockTotal}}</td>
+                    <td>{{stockCash}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        <a href="buy"><button>Make Another Purchase</button></a>
+    </p>
+{% endblock %}

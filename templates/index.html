@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Portfolio
+{% endblock %}
+
+{% block main %}
+    <h3 class="text-left">Balances</h3>
+    <div class="text-left">
+        <table class="cash-tbl">
+            <tbody>
+                <tr>
+                    <td>Cash Available:</td>
+                    <td>{{cashBal}}</td>
+                </tr>
+                <tr>
+                    <td>Stock Value:</td>
+                    <td>{{stockBal}}</td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td>{{totalBal}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top:20px;">
+            <a href="deposit"><button>Add Cash to Account</button></a>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <h3 class="text-left">Stock Portfolio</h3>
+    <div>
+        <table class="stock-tbl">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Current Price</th>
+                    <th>Qty</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{stock.sName}}</td>
+                    <td>{{stock.sSymbol}}</td>
+                    <td>{{stock.price}}</td>
+                    <td>{{stock["SUM(qty)"]}}</td>
+                    <td>{{stock.total}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
