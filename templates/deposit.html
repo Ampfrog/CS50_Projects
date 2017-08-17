@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit Cash
+{% endblock %}
+
+{% block main %}
+    <h3>Add Cash to Account</h3>
+    <form action="{{ url_for('deposit') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                Amount:<br/>
+                $ <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="X.XX" type="text"/>
+            </div>
+            <div class="form-group">
+            <button class="btn btn-default" type="submit">Deposit</button>
+        </div>
+        </fieldset>
+    </form>
+{% endblock %}

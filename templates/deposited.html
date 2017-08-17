@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cash Deposited
+{% endblock %}
+
+{% block main %}
+    <h3 class="text-left">Cash Deposited</h3>
+    <div>
+        <table class="cash-added-tbl">
+            <tbody>
+                <tr>
+                    <td>Amount Deposited:</td>
+                    <td>{{cashAmt}}</td>
+                </tr>
+                <tr>
+                    <td>New Cash Balance:</td>
+                    <td>{{cashTtl}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-left" style="margin-top:20px;">
+        <a href="/"><button>Return to Overview</button></a>
+    </div>
+{% endblock %}

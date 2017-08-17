@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote List
+{% endblock %}
+
+{% block main %}
+    <h3>Quote List</h3>
+    <div>
+        <table class="stock-tbl">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{stockName}}</td>
+                    <td>{{stockSym}}</td>
+                    <td>{{stockPrice}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        <a href="quote"><button>Get Another Quote</button></a>
+    </p>
+{% endblock %}
