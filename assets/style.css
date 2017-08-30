@@ -1,0 +1,53 @@
+.game-area {
+	border:solid #ff3300 3px;
+}
+
+.hidden {
+	display:none;
+}
+
+.inline {
+	display:inline-block;
+}
+
+.scores {
+	width:120px;
+	height:300px;
+	text-align:center;
+	margin-left:30px;
+	padding:0px 20px 20px 20px;
+	border:solid #ff3300 3px;
+	border-radius:10px;
+	background:#fff;
+	vertical-align:top;
+	color:#595959;
+	font-family:"Impact",Times,serif;
+}
+
+#topScoreList {
+	font-family:"Times New Roman",Times,serif;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	background:#000;
+}
+
+header {
+	padding:5px 20px 20px 20px;
+	margin:0px;
+	color:#fff;
+	background:#ff3300;
+}
+
+main {
+	padding:20px;
+	width:900px;
+	margin:auto;
+}
+
+ol {
+	margin:0px;
+	padding:0px;
+}
