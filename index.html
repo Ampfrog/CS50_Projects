@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bombs Away</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="assets/gameLib.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				BA.init();
+			});
+		</script>
+	</head>
+	
+	<body>
+		<header>
+			<h2>CS50 Final Project: Bombs Away Game</h2>
+			<div>
+				<ul>
+					<li>Utilizes: HTML5, CSS3, JavaScript, jQuery</li>
+					<li>Written and developed by Josh Wittlieff (Seattle, WA)</li>
+					<li>All artwork is original by Josh Wittlieff</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<div id="gameCtnr" class="inline">
+				<canvas id='gameArea' class='game-area' width="600" height="400">
+					Error: Browser does not support HTML5 canvas tag.
+				</canvas>
+			</div>
+			<div class="inline scores">
+				<h3>&bull;&nbsp;Top Scores&nbsp;&bull;</h3>
+				<div id="topScoreList"></div>
+			</div>
+		</main>
+		
+		<!--Preload-->
+		<div class="hidden" id="preload">
+			<img class="hidden" src="assets/img/bomb.png" />
+			<img class="hidden" src="assets/img/boom.png" />
+			<img class="hidden" src="assets/img/intro.jpg" />
+			<img class="hidden" src="assets/img/back.jpg" />
+		</div>
+	</body>
+</html> 
